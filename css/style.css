@@ -465,7 +465,7 @@ template {
 }
 
 .hotel {
-  padding-top: 23px;
+  padding-top: 13px;
   padding-bottom: 70px;
 }
 .hotel-info {
@@ -483,6 +483,9 @@ template {
 }
 .hotel-info__description {
   margin: 0;
+}
+.hotel-info__rating {
+  margin-top: 5px;
 }
 .hotel-name {
   font-size: 24px;
