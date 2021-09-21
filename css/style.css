@@ -674,9 +674,30 @@ template {
   .hotel .rating {
     display: none;
   }
+
+  .slider {
+    width: 567px;
+  }
+
+  .swiper {
+    height: 350px;
+  }
 }
 @media (max-width: 576px) {
   .logo {
     width: 99px;
+  }
+
+  .container {
+    max-width: 280px;
+    width: 90%;
+  }
+
+  .slider {
+    width: 280px;
+  }
+
+  .swiper {
+    height: 179px;
   }
 }/*# sourceMappingURL=style.css.map */
