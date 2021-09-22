@@ -1,7 +1,14 @@
-@media (max-width: 1200px)
+@media (max-width: 1199px)
   .container
     max-width: 960px
-
+  // адаптив для слайдера
+  .slider
+    width: 590px
+  .swiper
+    &-slide
+      &__image
+        height: 100%
+        object-fit: cover
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -24,8 +31,25 @@
     &__input
       width: 340px
 
+  .hotel
+    &-grid
+      flex-direction: column
+    &__slider
+      margin-bottom: 30px
+    &-right
+      flex-direction: row
+  .booking
+    width: 340px
   .slider
-    width: 700px
+    width: 100%
+  .swiper
+    &-slide
+      &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+  .map
+    width: 340px
 
 @media (max-width: 767px)
   .container
@@ -76,13 +100,16 @@
       &__name
         margin-top: 10px
         margin-bottom: 0
-      &__description
+    &-right
+      flex-direction: column
+      min-height: 450px
 
     .rating
       display: none
 
   .slider
     width: 567px
+    height: 350px
 
   .swiper
     height: 350px
@@ -90,6 +117,10 @@
       &__image
         min-height: 100%
         object-fit: cover
+  .booking
+    width: 100%
+  .map
+    width: 100%
 
 @media (max-width: 576px)
   .logo
@@ -98,8 +129,23 @@
     max-width: 280px
     width: 90%
 
+  .breadcrumb-list
+    padding-top: 18px
+    padding-bottom: 5px
+
   .slider
     width: 280px
+    height: 100%
 
   .swiper
     height: 179px
+
+  .hotel
+    &__slider
+      margin-bottom: 20px
+    &-info
+      margin-bottom: 20px
+
+  .booking
+    &__pricetag
+      line-height: 27px
