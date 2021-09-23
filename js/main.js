@@ -29,3 +29,6 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     pageUpDown: true,
   },
 });
+
+
+$('.parallax-window').parallax({imageSrc: '/img/newsletter-bg.jpg'});

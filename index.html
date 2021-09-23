@@ -174,23 +174,32 @@
       <!-- /.container -->
     </section>
     <!-- ./hotel -->
-    <section class="newsletter">
-      <div class="newsletter-wrapper">
-        <h2 class="newsletter-title">
-          subscribe to our
-          <span class="newsletter-title__strong">Newsletter</span>
-        </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
-          <input type="text" class="subscribe__input" placeholder="Your email address" />
-          <button class="subscribe__button">Send</button>
-        </form>
+
+    <section class="subsribe">
+      <!-- parallax -->
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/img/newsletter-bg.jpg">
+        <div class="newsletter">
+          <div class="newsletter-wrapper">
+            <h2 class="newsletter-title">
+              subscribe to our
+              <span class="newsletter-title__strong">Newsletter</span>
+            </h2>
+            <form action="#" class="newsletter-subscribe">
+              <input type="text" class="newsletter-subscribe__input" placeholder="Your email address" />
+              <button class="newsletter-subscribe__button">Send</button>
+            </form>
+          </div>
+          <!-- ./newsletter-wrapper -->
+        </div>
+        <!-- ./newsletter -->
       </div>
-      <!-- ./newsletter-wrapper -->
+      <!-- ./parallax -->
     </section>
-    <!-- ./newsletter -->
+    <!-- /.subscribe -->
+
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people think about us</h2>
+        <h2 class="reviews__title">What people think about&nbspus</h2>
         <div class="swiper reviews-slider">
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -285,5 +294,8 @@
     <!-- /.reviews -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- скрипт параллакс -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
   </body>
 </html>
