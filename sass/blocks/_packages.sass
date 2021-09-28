@@ -1,53 +1,163 @@
 .packages
+  padding-top: 40px
+  padding-bottom: 70px
   &-wrapper
     // border: 2px solid red
     width: 100%
 
 .packages-grid
   display: grid
-
   grid-template-rows: 1fr 1fr
   grid-template-columns: 1fr 1fr 1fr
-
   grid-template-areas: "packages__card1 packages__card1 packages__card2" "packages__card3 packages__card4 packages__card5"
   gap: 30px
   // height: 100%
 
+.packages__title
+  font-style: normal
+  font-weight: bold
+  font-size: 36px
+  line-height: 45px
+  text-align: center
+  text-transform: uppercase
+  margin: 0 0 65px 0
+
 .packages-card
   display: flex
+  position: relative
   height: 500px
   border-radius: 8px
-  overflow: hidden
-
-.packages__card1
-  position: relative
-  object-fit: cover
-  display: flex
-  height: 500px
-  overflow: hidden
-
-  // ????? почему если изменить количество колонок или линий, то высота карточки меняется
-
-.packages__card2
-  // display: grid
+  background-color: $dark
   flex-direction: column
   overflow: hidden
-  grid-template-rows: 1fr 1fr
-  grid-template-columns: 1fr
 
-.packages-card__image1
-  // делается чтобы изображение не растягивалось и убирается полоса в 1px внизу картинки
-  // height: 101%
+.packages-card1__image
+  // position: relative
+  height: auto
+  width: 50%
+  object-fit: cover
 
-.packages-card__text--horizontal
-  // border: 2px dotted #000
-  grid-template-rows: 1fr 1fr
-  height: 100%
-  width: 100%
+.packages-card1__offer
+  position: absolute
+  left: 0
+  top: 26px
+  padding: 8px 19px 7px 11px
+  // font-weight: 600
+  font-style: normal
+  font-size: 12px
+  line-height: 15px
+  border-radius: 0 4px 4px 0
+  border: none
+  background-color: $primary
+  color: $light
+
+.packages-card__image
+  // position: relative
+  height: 50%
+  width: auto
+  object-fit: cover
+
+.packages-card__text-horizontal
+  display: flex
+  flex-direction: column
+  // justify-content: flex-start
+  font-size: 3px
   background: $dark
   color: #ffffff
   margin: 0
-  padding: 46px 21px 30px 43px
+  padding: 48px 21px 44px 43px
+  width: 50%
+
+.packages-card__text-vertical
+  background: $dark
+  color: #ffffff
+  margin: 0
+  padding: 32px 32px
+  height: 50%
+
+.packages__offer
+  position: absolute
+  left: 0
+  top: 26px
+  font-size: 8px
+  line-height: 10px
+  border-radius: 0 4px 4px 0
+  border: transparent
+  font-style: normal
+  padding: 4px 9px
+  background-color: $primary
+  color: $light
+
+.packages__name
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 23px
+  margin: 0
+  margin-bottom: 20px
+.packages-description
+  display: block
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 157%
+  margin-bottom: 46px
+  margin-top: 8px
+
+  // dshgjfhjk
+
+  // asdhjhk
+.packages__stars
+  font-size: 8px
+  // margin-bottom: 1px
+.packages
+  &-info
+    // display: flex
+    // align-items: flex-start
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 160%
+    color: $footer-text-color
+    margin-bottom: 29px
+  &__ul
+    padding: 0
+    margin: 0
+    list-style: none
+  &__icon
+    &-wrapper
+      display: flex
+      min-width: 20px
+      justify-content: center
+      padding-right: 16px
+  &__item
+    display: flex
+    align-items: flex-start
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: #fff
+    margin-bottom: 10px
+  &-price
+    // display: flex
+    // flex-direction: column
+    &__old
+      display: block
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+      padding-bottom: 2px
+      padding-left: 2px
+    &__new
+      display: block
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+
 // 123456
 
 // 12345
@@ -59,21 +169,17 @@
 // 214412
 
 .packages__card1
-  background-color: $dark
+  flex-direction: row
   grid-area: packages__card1
 
 .packages__card2
-  background-color: #fd59ea
   grid-area: packages__card2
 
 .packages__card3
-  background-color: #d79b5c
   grid-area: packages__card3
 
 .packages__card4
-  background-color: #d5a5b6
   grid-area: packages__card4
 
 .packages__card5
-  background-color: #be67f5
   grid-area: packages__card5
