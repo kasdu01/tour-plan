@@ -1,0 +1,79 @@
+.packages
+  &-wrapper
+    // border: 2px solid red
+    width: 100%
+
+.packages-grid
+  display: grid
+
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr
+
+  grid-template-areas: "packages__card1 packages__card1 packages__card2" "packages__card3 packages__card4 packages__card5"
+  gap: 30px
+  // height: 100%
+
+.packages-card
+  display: flex
+  height: 500px
+  border-radius: 8px
+  overflow: hidden
+
+.packages__card1
+  position: relative
+  object-fit: cover
+  display: flex
+  height: 500px
+  overflow: hidden
+
+  // ????? почему если изменить количество колонок или линий, то высота карточки меняется
+
+.packages__card2
+  // display: grid
+  flex-direction: column
+  overflow: hidden
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 1fr
+
+.packages-card__image1
+  // делается чтобы изображение не растягивалось и убирается полоса в 1px внизу картинки
+  // height: 101%
+
+.packages-card__text--horizontal
+  // border: 2px dotted #000
+  grid-template-rows: 1fr 1fr
+  height: 100%
+  width: 100%
+  background: $dark
+  color: #ffffff
+  margin: 0
+  padding: 46px 21px 30px 43px
+// 123456
+
+// 12345
+
+// `1314
+
+// `4`21
+
+// 214412
+
+.packages__card1
+  background-color: $dark
+  grid-area: packages__card1
+
+.packages__card2
+  background-color: #fd59ea
+  grid-area: packages__card2
+
+.packages__card3
+  background-color: #d79b5c
+  grid-area: packages__card3
+
+.packages__card4
+  background-color: #d5a5b6
+  grid-area: packages__card4
+
+.packages__card5
+  background-color: #be67f5
+  grid-area: packages__card5
