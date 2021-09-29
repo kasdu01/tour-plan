@@ -139,36 +139,70 @@
   .footer
     padding-top: 72px
     &-wrapper
-      grid-template-columns: repeat(6, 1fr)
-      grid-row-gap: 40px
+      grid-template-columns: repeat(35, minmax(5px,20px))
+      grid-row-gap: 50px
+      grid-column-gap: 0px
 
     &__logo
       width: 95px
       grid-row: 1 / 2
-      grid-column: span 2
+      grid-column: span 10
 
     &__social
       &-network
         grid-row: 1 / 2
-        grid-column: span 4
+        grid-column: span 25
         align-self: center
     &__categories
       grid-row: 2 / 3
-      grid-column: span 2
-    &__legal
-      grid-column: span 2
+      grid-column: span 10
     &__additional
-      grid-column: span 2
+      grid-column: span 14
+    &__legal
+      grid-column: span 11
 
     &__input
       flex-basis: 48%
     &__contact
       &-details
-        grid-column: span 5
+        grid-column: span 35
         grid-row: 3
       &-form
-        grid-column: span 5
+        grid-column: span 27
         grid-row: 4
+  // .footer
+  //   padding-top: 72px
+  //   &-wrapper
+  //     grid-template-columns: repeat(6, 1fr)
+  //     grid-row-gap: 40px
+
+  //   &__logo
+  //     width: 95px
+  //     grid-row: 1 / 2
+  //     grid-column: span 2
+
+  //   &__social
+  //     &-network
+  //       grid-row: 1 / 2
+  //       grid-column: span 4
+  //       align-self: center
+  //   &__categories
+  //     grid-row: 2 / 3
+  //     grid-column: span 2
+  //   &__legal
+  //     grid-column: span 2
+  //   &__additional
+  //     grid-column: span 2
+
+  //   &__input
+  //     flex-basis: 48%
+  //   &__contact
+  //     &-details
+  //       grid-column: span 5
+  //       grid-row: 3
+  //     &-form
+  //       grid-column: span 5
+  //       grid-row: 4
 
 @media (max-width: 767px)
   .container
@@ -277,6 +311,8 @@
   .footer
     &__input
       flex-basis: 100%
+    &__title
+      font-size: 14px
 
 @media (max-width: 576px)
   .logo
@@ -355,6 +391,7 @@
 
   .activites
     padding-top: 30px
+    padding-bottom: 60px
     &__title
       margin-bottom: 37px
       font-size: 18px
@@ -374,8 +411,19 @@
       order: 4
 
   .footer
+    padding-top: 65px
     &-wrapper
       grid-template-columns: 280px
+      grid-row-gap: 28px
+    &__title
+      font-size: 18px
+      &--inline
+        margin-top: 11px
+        margin-bottom: 25px
+      &--mb-3
+        margin-top: 13px
+        margin-bottom: 16px
+
     &__logo
       grid-row: 1
       grid-column: 1
@@ -384,15 +432,19 @@
       &-network
         grid-row: 2
         grid-column: 1
-    &__categories
-      grid-row: 4
-      grid-column: 1
+        display: flex
+        flex-wrap: wrap
     &__legal
-      grid-row: 5
+      grid-row: 3
       grid-column: 1
       justify-self: start
+
     &__additional
-      grid-row: 3
+      grid-row: 4
+      grid-column: 1
+
+    &__categories
+      grid-row: 5
       grid-column: 1
 
     &__input
@@ -404,3 +456,6 @@
       &-form
         grid-row: 7
         grid-column: 1
+    &__icon
+      &-wrapper
+        min-width: 32px
