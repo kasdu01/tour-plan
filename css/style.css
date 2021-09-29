@@ -1252,6 +1252,13 @@ template {
   margin-bottom: 15px;
   flex-basis: 48%;
 }
+.footer__input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: inherit;
+}
 .footer__message {
   background-color: #fff;
   border-radius: 4px;
@@ -1260,6 +1267,13 @@ template {
   flex-basis: 100%;
   margin-bottom: 23px;
   height: 125px;
+}
+.footer__message::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: inherit;
 }
 .footer__button {
   min-width: 160px;
@@ -1411,6 +1425,7 @@ template {
 
   .activites {
     padding-top: 55px;
+    padding-bottom: 72px;
   }
   .activites-card {
     width: 339px;
@@ -1418,11 +1433,55 @@ template {
     object-fit: cover;
   }
 
+  .footer {
+    padding-top: 72px;
+  }
+  .footer-wrapper {
+    grid-template-columns: repeat(47, 10px);
+    grid-row-gap: 50px;
+    grid-column-gap: 5px;
+  }
+  .footer__logo {
+    width: 95px;
+    grid-row: 1/2;
+    grid-column: span 12;
+  }
+  .footer__social-network {
+    grid-row: 1/2;
+    grid-column: span 25;
+    align-self: center;
+  }
+  .footer__categories {
+    grid-row: 2/3;
+    grid-column: span 13;
+  }
+  .footer__additional {
+    grid-column: span 20;
+  }
+  .footer__legal {
+    grid-column: span 13;
+  }
+  .footer__input {
+    flex-basis: 48%;
+  }
+  .footer__contact-details {
+    grid-column: span 5;
+    grid-row: 3;
+  }
+  .footer__contact-form {
+    grid-column: span 5;
+    grid-row: 4;
+  }
+
+  .footer {
+    padding-top: 72px;
+  }
   .footer-wrapper {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
   }
   .footer__logo {
+    width: 95px;
     grid-row: 1/2;
     grid-column: span 2;
   }
