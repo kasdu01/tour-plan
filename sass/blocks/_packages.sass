@@ -60,6 +60,7 @@
 .packages-card__text-horizontal
   display: flex
   flex-direction: column
+  position: relative
   // justify-content: flex-start
   font-size: 3px
   background: $dark
@@ -67,6 +68,24 @@
   margin: 0
   padding: 48px 21px 44px 43px
   width: 50%
+
+.packages-button
+  position: absolute
+  z-index: 10
+  right: 21px
+  bottom: 25px
+  padding: 11px 27px
+  border-radius: 4px
+  border: none
+  background-color: $primary
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 19px
+  color: #FFFFFF
+
+.packages-button__card1
+  bottom: 31px
 
 .packages-card__text-vertical
   background: $dark
