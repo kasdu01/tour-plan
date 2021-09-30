@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo"><img class="logo__image" src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" /></a>
 
-          <form action="#" class="search navbar__search">
+          <form action="#" class="search navbar__search navbar__search--mobile--hidden">
             <input type="text" class="search__input" placeholder="Search Location" />
             <button class="search__button"><img src="img/search.svg" alt="Icon: search" /></button>
           </form>
 
-          <a href="#" class="user navbar__user">
+          <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar" />
             <span class="user__name">Nathan</span>
           </a>
@@ -42,6 +42,18 @@
       <div class="navbar-bottom">
         <div class="container">
           <ul class="navbar-menu">
+            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+              <a href="#" class="user navbar__user navbar__user--mobile--visible">
+                <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar" />
+                <span class="user__name user__name--light">Nathan</span>
+              </a>
+            </li>
+            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+              <form action="#" class="search navbar__search navbar__search--mobile--visible">
+                <input type="text" class="search__input" placeholder="Search Location" />
+                <button class="search__button"><img src="img/search.svg" alt="Icon: search" /></button>
+              </form>
+            </li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activites</a></li>
@@ -180,8 +192,8 @@
       <div class="container">
         <div class="packages__title">Other Packages</div>
         <div class="packages-wrapper">
-          <class class="packages-grid">
-            <div class="packages-card packages__card1">
+          <div class="packages-grid">
+            <div class="packages-card packages-card1">
               <img src="img/packages__image-1.jpg" alt="" class="packages-card1__image" />
               <span class="packages-card1__offer">Flash Offer &nbsp; </span>
 
@@ -215,7 +227,7 @@
                     </li>
                     <li class="packages__item">
                       <div class="packages__icon-wrapper">
-                        <img class="packages-ul__icon" src="img/home.svg" alt="icon: email" />
+                        <img class="packages__icon" src="img/home.svg" alt="icon: email" />
                       </div>
                       <span>1 x Room</span>
                     </li>
@@ -229,10 +241,10 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-horizontal -->
-              <button class="packages-button packages-button__card1">Book Now</button>
+              <button class="packages__button packages__button1">Book Now</button>
             </div>
             <!-- /.packages__card1 -->
-            <div class="packages-card packages__card2">
+            <div class="packages-card packages-card2">
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-mini.jpg" alt="" class="packages-card__image" />
               <div class="packages-card__text-vertical">
@@ -253,7 +265,7 @@
                     </li>
                     <li class="packages__item">
                       <div class="packages__icon-wrapper">
-                        <img class="packages-ul__icon" src="img/home.svg" alt="icon: email" />
+                        <img class="packages__icon" src="img/home.svg" alt="icon: email" />
                       </div>
                       <span>1 x Room</span>
                     </li>
@@ -266,13 +278,13 @@
                 </div>
                 <!-- /.price -->
               </div>
-              <button class="packages-button">Book Now</button>
+              <button class="packages__button">Book Now</button>
             </div>
-            <!-- /.packages__card2 -->
-            <div class="packages-card packages__card3">
+            <!-- /.packages-card2 -->
+            <div class="packages-card packages-card3">
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-3.jpg" alt="" class="packages-card__image" />
-               <div class="packages-card__text-vertical">
+              <div class="packages-card__text-vertical">
                 <h3 class="packages__name">White Palace</h3>
                 <div class="packages-info">
                   <ul class="packages__ul">
@@ -290,7 +302,7 @@
                     </li>
                     <li class="packages__item">
                       <div class="packages__icon-wrapper">
-                        <img class="packages-ul__icon" src="img/home.svg" alt="icon: email" />
+                        <img class="packages__icon" src="img/home.svg" alt="icon: email" />
                       </div>
                       <span>1 x Room</span>
                     </li>
@@ -304,13 +316,13 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages-button">Book Now</button>
+              <button class="packages__button">Book Now</button>
             </div>
-            <!-- /.packages__card3 -->
-            <div class="packages-card packages__card4">
+            <!-- /.packages-card3 -->
+            <div class="packages-card packages-card4">
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-4.jpg" alt="" class="packages-card__image" />
-                             <div class="packages-card__text-vertical">
+              <div class="packages-card__text-vertical">
                 <h3 class="packages__name">Luxury Place</h3>
                 <div class="packages-info">
                   <ul class="packages__ul">
@@ -328,7 +340,7 @@
                     </li>
                     <li class="packages__item">
                       <div class="packages__icon-wrapper">
-                        <img class="packages-ul__icon" src="img/home.svg" alt="icon: email" />
+                        <img class="packages__icon" src="img/home.svg" alt="icon: email" />
                       </div>
                       <span>1 x Room</span>
                     </li>
@@ -342,13 +354,13 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages-button">Book Now</button>
+              <button class="packages__button">Book Now</button>
             </div>
-            <!-- /.packages__card4 -->
-            <div class="packages-card packages__card5">
+            <!-- /.packages-card4 -->
+            <div class="packages-card packages-card5">
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-5.jpg" alt="" class="packages-card__image" />
-                             <div class="packages-card__text-vertical">
+              <div class="packages-card__text-vertical">
                 <h3 class="packages__name">Hotel Five Star</h3>
                 <div class="packages-info">
                   <ul class="packages__ul">
@@ -366,7 +378,7 @@
                     </li>
                     <li class="packages__item">
                       <div class="packages__icon-wrapper">
-                        <img class="packages-ul__icon" src="img/home.svg" alt="icon: email" />
+                        <img class="packages__icon" src="img/home.svg" alt="icon: email" />
                       </div>
                       <span>1 x Room</span>
                     </li>
@@ -380,11 +392,13 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages-button">Book Now</button>
+              <button class="packages__button">Book Now</button>
             </div>
-            <!-- /.packages__card5 -->
+            <!-- /.packages-card5 -->
           </div>
+          <!-- /.packages-grid -->
         </div>
+        <!-- /.packages-wrapper -->
       </div>
       <!-- /.container -->
     </section>
@@ -413,7 +427,7 @@
 
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people think about&nbspus</h2>
+        <h2 class="reviews__title">What people think about&nbsp;us</h2>
         <div class="swiper reviews-slider">
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -521,7 +535,7 @@
         <div class="activites-wrapper">
           <div class="activites-card activites__card1">
             <img src="img/activites-1.jpg" alt="activites-1" class="activites-card__image" />
-            <span class="activites-card__label">The curious corner of&nbspchamarel</span>
+            <span class="activites-card__label">The curious corner of&nbsp;chamarel</span>
             <div class="activites-card__button">Book Now</div>
           </div>
           <div class="activites-card activites__card2">
@@ -531,7 +545,7 @@
           </div>
           <div class="activites-card activites__card3">
             <img src="img/activites-3.jpg" alt="activites-3" class="activites-card__image" />
-            <span class="activites-card__label">Tamarind falls hiking trip&nbsp-&nbspfull day</span>
+            <span class="activites-card__label">Tamarind falls hiking trip&nbsp;-&nbsp;full day</span>
             <div class="activites-card__button">Book Now</div>
           </div>
           <div class="activites-card activites__card4">
@@ -561,7 +575,7 @@
               <li class="footer__item"><a href="#" class="footer__link">Rodrigues</a></li>
             </ul>
           </div>
-          <!-- /.footel__list -->
+          <!-- /.footer__list -->
           <div class="footer__list footer__additional">
             <h3 class="footer__title">ADDITIONAL INFORMATION</h3>
             <ul class="footer__ul">
@@ -573,12 +587,14 @@
               <li class="footer__item"><a href="#" class="footer__link">Promote your Business on BTP</a></li>
             </ul>
           </div>
-          <!-- /.footel__list -->
+          <!-- /.footer__list -->
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social&nbsp;Netrwork</h3>
             <div class="footer__social-links">
               <a href="https://www.facebook.com" class="footer__link"><img src="img/facebook.svg" alt="icon: facebook" /></a>
-              <a href="https://youtube.com" target="_blank" class="footer__link"><img src="img/youtube.svg" alt="icon: youtube" /></a>
+              <a href="https://youtube.com" target="_blank" class="footer__link"
+                ><img src="img/youtube.svg" alt="icon: youtube"
+              /></a>
               <a href="https://www.instagram.com/" class="footer__link"><img src="img/instagram.svg" alt="icon: instagram" /></a>
             </div>
             <!-- /.footer__social-links -->
@@ -593,7 +609,7 @@
               <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
             </ul>
           </div>
-          <!-- /.footel__list -->
+          <!-- /.footer__list -->
           <div class="footer__contact-details">
             <h3 class="footer__title footer__title--mb-1">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
@@ -608,15 +624,18 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/contact-phone-call.svg" alt="icon: contact-phone-call" />
                 </div>
-                <span>Tel (business hours): <a href="tel: 2691500" class="footer__link">269 1500</a> <br />
-                Tel (hotline) Monday - Saturday: <a href="tel: 52566138" class="footer__link">52-56-61-38</a> (08:00 am – 20:00 pm) <br />
-                Tel (hotline) Sunday: <a href="tel: 52566138" class="footer__link">52-56-61-38</a> (08:00 am – 14:00 pm)</span> 
+                <span
+                  >Tel (business hours): <a href="tel:2691500" class="footer__link">269 1500</a> <br />
+                  Tel (hotline) Monday - Saturday: <a href="tel:52566138" class="footer__link">52-56-61-38</a> (08:00 am – 20:00
+                  pm) <br />
+                  Tel (hotline) Sunday: <a href="tel:52566138" class="footer__link">52-56-61-38</a> (08:00 am – 14:00 pm)</span
+                >
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="icon: email" />
                 </div>
-                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a> 
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">cherly.lawson@example.com</a>
               </li>
             </ul>
           </div>
@@ -639,9 +658,9 @@
     </footer>
     <!-- /.footer -->
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
     <!-- скрипт параллакс -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
