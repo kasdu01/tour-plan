@@ -1564,6 +1564,11 @@ template {
   .navbar-menu__item--mobile--visible {
     display: block;
   }
+  .navbar__search--mobile--visible {
+    max-width: 280px;
+    margin: 0;
+    overflow: scroll;
+  }
 
   .menu-button {
     display: flex;
