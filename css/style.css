@@ -1554,6 +1554,7 @@ template {
   }
   .navbar-bottom--visible {
     display: block;
+    overflow: scroll;
   }
   .navbar-menu {
     flex-direction: column;
@@ -1567,7 +1568,6 @@ template {
   .navbar__search--mobile--visible {
     max-width: 280px;
     margin: 0;
-    overflow: scroll;
   }
 
   .menu-button {
