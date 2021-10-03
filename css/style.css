@@ -692,6 +692,20 @@ template {
   overflow: hidden;
 }
 
+.button--back {
+  width: 100px;
+  min-height: 45px;
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 4px;
+  background-color: #EC1F46;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .packages {
   padding-top: 40px;
   padding-bottom: 70px;
@@ -699,7 +713,6 @@ template {
 .packages-wrapper {
   width: 100%;
 }
-
 .packages-grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -707,7 +720,6 @@ template {
   grid-template-areas: "packages-card1 packages-card1 packages-card2" "packages-card3 packages-card4 packages-card5";
   gap: 30px;
 }
-
 .packages__title {
   font-style: normal;
   font-weight: bold;
@@ -717,7 +729,6 @@ template {
   text-transform: uppercase;
   margin: 0 0 65px 0;
 }
-
 .packages-card {
   display: flex;
   position: relative;
@@ -727,13 +738,34 @@ template {
   flex-direction: column;
   overflow: hidden;
 }
-
+.packages-card__image {
+  height: 50%;
+  width: auto;
+  object-fit: cover;
+}
+.packages-card__text-horizontal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 3px;
+  background: #0a223d;
+  color: #ffffff;
+  margin: 0;
+  padding: 48px 21px 44px 43px;
+  width: 50%;
+}
+.packages-card__text-vertical {
+  background: #0a223d;
+  color: #ffffff;
+  margin: 0;
+  padding: 32px 32px;
+  height: 50%;
+}
 .packages-card1__image {
   height: auto;
   width: 50%;
   object-fit: cover;
 }
-
 .packages-card1__offer {
   position: absolute;
   left: 0;
@@ -747,25 +779,6 @@ template {
   background-color: #EC1F46;
   color: #ffffff;
 }
-
-.packages-card__image {
-  height: 50%;
-  width: auto;
-  object-fit: cover;
-}
-
-.packages-card__text-horizontal {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  font-size: 3px;
-  background: #0a223d;
-  color: #ffffff;
-  margin: 0;
-  padding: 48px 21px 44px 43px;
-  width: 50%;
-}
-
 .packages__button {
   position: absolute;
   z-index: 10;
@@ -781,19 +794,9 @@ template {
   line-height: 19px;
   color: #FFFFFF;
 }
-
 .packages__button1 {
   bottom: 31px;
 }
-
-.packages-card__text-vertical {
-  background: #0a223d;
-  color: #ffffff;
-  margin: 0;
-  padding: 32px 32px;
-  height: 50%;
-}
-
 .packages__offer {
   position: absolute;
   left: 0;
@@ -807,7 +810,6 @@ template {
   background-color: #EC1F46;
   color: #ffffff;
 }
-
 .packages__name {
   font-style: normal;
   font-weight: bold;
@@ -816,21 +818,21 @@ template {
   margin: 0;
   margin-bottom: 20px;
 }
-
 .packages-description {
   display: block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 157%;
-  margin-bottom: 46px;
+  height: 195px;
+  overflow-x: clip;
+  overflow-y: auto;
   margin-top: 8px;
+  margin-bottom: 10px;
 }
-
 .packages__stars {
   font-size: 8px;
 }
-
 .packages-info {
   font-style: normal;
   font-weight: normal;
@@ -877,24 +879,19 @@ template {
   font-size: 24px;
   line-height: 30px;
 }
-
 .packages-card1 {
   flex-direction: row;
   grid-area: packages-card1;
 }
-
 .packages-card2 {
   grid-area: packages-card2;
 }
-
 .packages-card3 {
   grid-area: packages-card3;
 }
-
 .packages-card4 {
   grid-area: packages-card4;
 }
-
 .packages-card5 {
   grid-area: packages-card5;
 }
@@ -960,6 +957,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  cursor: pointer;
 }
 
 .reviews {
@@ -1290,6 +1288,7 @@ template {
   background-color: #EC1F46;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 .footer__info {
   font-style: normal;
@@ -1323,6 +1322,11 @@ template {
   }
   .footer-wrapper {
     grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "packages-card1 packages-card1 packages-card2" "packages-card3 packages-card4 packages-card5";
   }
 }
 @media (max-width: 992px) {
@@ -1390,6 +1394,11 @@ template {
     width: 340px;
   }
 
+  .packages-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "packages-card1 packages-card1" "packages-card2 packages-card3" "packages-card4 packages-card5";
+  }
+
   .newsletter {
     padding-top: 93px;
   }
@@ -1430,46 +1439,6 @@ template {
     width: 339px;
     height: 255px;
     object-fit: cover;
-  }
-
-  .footer {
-    padding-top: 72px;
-  }
-  .footer-wrapper {
-    grid-template-columns: repeat(47, 10px);
-    grid-row-gap: 50px;
-    grid-column-gap: 5px;
-  }
-  .footer__logo {
-    width: 95px;
-    grid-row: 1/2;
-    grid-column: span 12;
-  }
-  .footer__social-network {
-    grid-row: 1/2;
-    grid-column: span 25;
-    align-self: center;
-  }
-  .footer__categories {
-    grid-row: 2/3;
-    grid-column: span 13;
-  }
-  .footer__additional {
-    grid-column: span 20;
-  }
-  .footer__legal {
-    grid-column: span 13;
-  }
-  .footer__input {
-    flex-basis: 48%;
-  }
-  .footer__contact-details {
-    grid-column: span 5;
-    grid-row: 3;
-  }
-  .footer__contact-form {
-    grid-column: span 5;
-    grid-row: 4;
   }
 
   .footer {
@@ -1647,6 +1616,37 @@ template {
     width: 100%;
   }
 
+  .packages__name {
+    margin-bottom: 0;
+  }
+  .packages-info {
+    margin-bottom: 10px;
+  }
+  .packages-description {
+    margin-bottom: 10px;
+  }
+  .packages-card {
+    height: 400px;
+  }
+  .packages-card__text-horizontal {
+    padding: 32px 21px 32px 32px;
+  }
+  .packages-card__text-vertical {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .packages-price__new {
+    font-size: 18px;
+  }
+  .packages__item {
+    margin-bottom: 5px;
+  }
+
   .newsletter-wrapper {
     max-width: 576px;
     width: 92%;
@@ -1737,6 +1737,29 @@ template {
 
   .booking__pricetag {
     line-height: 27px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: "packages-card1" "packages-card2" "packages-card3" "packages-card4" "packages-card5";
+  }
+  .packages-card1 {
+    flex-direction: column;
+    height: 600px;
+  }
+  .packages-card1__image {
+    height: calc(100%/3);
+    width: 100%;
+    object-fit: cover;
+  }
+  .packages-card {
+    position: relative;
+    z-index: 90;
+  }
+  .packages-card__text-horizontal {
+    height: calc(100%/3*2);
+    width: 100%;
   }
 
   .newsletter {

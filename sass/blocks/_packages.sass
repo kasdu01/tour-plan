@@ -5,131 +5,133 @@
     // border: 2px solid red
     width: 100%
 
-.packages-grid
-  display: grid
-  grid-template-rows: 1fr 1fr
-  grid-template-columns: 1fr 1fr 1fr
-  grid-template-areas: "packages-card1 packages-card1 packages-card2" "packages-card3 packages-card4 packages-card5"
-  gap: 30px
-  // height: 100%
+  &-grid
+    display: grid
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "packages-card1 packages-card1 packages-card2" "packages-card3 packages-card4 packages-card5"
+    gap: 30px
+    // height: 100%
 
-.packages__title
-  font-style: normal
-  font-weight: bold
-  font-size: 36px
-  line-height: 45px
-  text-align: center
-  text-transform: uppercase
-  margin: 0 0 65px 0
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin: 0 0 65px 0
 
-.packages-card
-  display: flex
-  position: relative
-  height: 500px
-  border-radius: 8px
-  background-color: $dark
-  flex-direction: column
-  overflow: hidden
+  &-card
+    display: flex
+    position: relative
+    height: 500px
+    border-radius: 8px
+    background-color: $dark
+    flex-direction: column
+    overflow: hidden
+    &__image
+      // position: relative
+      height: 50%
+      width: auto
+      object-fit: cover
 
-.packages-card1__image
-  // position: relative
-  height: auto
-  width: 50%
-  object-fit: cover
+    &__text
+      &-horizontal
+        display: flex
+        flex-direction: column
+        position: relative
+        // justify-content: flex-start
+        font-size: 3px
+        background: $dark
+        color: #ffffff
+        margin: 0
+        padding: 48px 21px 44px 43px
+        width: 50%
 
-.packages-card1__offer
-  position: absolute
-  left: 0
-  top: 26px
-  padding: 8px 19px 7px 11px
-  // font-weight: 600
-  font-style: normal
-  font-size: 12px
-  line-height: 15px
-  border-radius: 0 4px 4px 0
-  border: none
-  background-color: $primary
-  color: $light
+      &-vertical
+        background: $dark
+        color: #ffffff
+        margin: 0
+        padding: 32px 32px
+        height: 50%
 
-.packages-card__image
-  // position: relative
-  height: 50%
-  width: auto
-  object-fit: cover
+  &-card1
+    &__image
+      // position: relative
+      height: auto
+      width: 50%
+      object-fit: cover
 
-.packages-card__text-horizontal
-  display: flex
-  flex-direction: column
-  position: relative
-  // justify-content: flex-start
-  font-size: 3px
-  background: $dark
-  color: #ffffff
-  margin: 0
-  padding: 48px 21px 44px 43px
-  width: 50%
+    &__offer
+      position: absolute
+      left: 0
+      top: 26px
+      padding: 8px 19px 7px 11px
+      // font-weight: 600
+      font-style: normal
+      font-size: 12px
+      line-height: 15px
+      border-radius: 0 4px 4px 0
+      border: none
+      background-color: $primary
+      color: $light
 
-.packages__button
-  position: absolute
-  z-index: 10
-  right: 21px
-  bottom: 25px
-  padding: 11px 27px
-  border-radius: 4px
-  border: none
-  background-color: $primary
-  font-style: normal
-  font-weight: 600
-  font-size: 14px
-  line-height: 19px
-  color: #FFFFFF
+  &__button
+    position: absolute
+    z-index: 10
+    right: 21px
+    bottom: 25px
+    padding: 11px 27px
+    border-radius: 4px
+    border: none
+    background-color: $primary
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    color: #FFFFFF
 
-.packages__button1
-  bottom: 31px
+  &__button1
+    bottom: 31px
 
-.packages-card__text-vertical
-  background: $dark
-  color: #ffffff
-  margin: 0
-  padding: 32px 32px
-  height: 50%
+  &__offer
+    position: absolute
+    left: 0
+    top: 26px
+    font-size: 8px
+    line-height: 10px
+    border-radius: 0 4px 4px 0
+    border: transparent
+    font-style: normal
+    padding: 4px 9px
+    background-color: $primary
+    color: $light
 
-.packages__offer
-  position: absolute
-  left: 0
-  top: 26px
-  font-size: 8px
-  line-height: 10px
-  border-radius: 0 4px 4px 0
-  border: transparent
-  font-style: normal
-  padding: 4px 9px
-  background-color: $primary
-  color: $light
+  &__name
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    margin: 0
+    margin-bottom: 20px
 
-.packages__name
-  font-style: normal
-  font-weight: bold
-  font-size: 18px
-  line-height: 23px
-  margin: 0
-  margin-bottom: 20px
-.packages-description
-  display: block
-  font-style: normal
-  font-weight: normal
-  font-size: 14px
-  line-height: 157%
-  margin-bottom: 46px
-  margin-top: 8px
+  &-description
+    display: block
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 157%
+    height: 195px
+    overflow-x: clip
+    overflow-y: auto
+    margin-top: 8px
+    margin-bottom: 10px
 
-  // dshgjfhjk
+  &__stars
+    font-size: 8px
+    // margin-bottom: 1px
 
-  // asdhjhk
-.packages__stars
-  font-size: 8px
-  // margin-bottom: 1px
-.packages
   &-info
     // display: flex
     // align-items: flex-start
@@ -177,28 +179,18 @@
       font-size: 24px
       line-height: 30px
 
-// 123456
+  &-card1
+    flex-direction: row
+    grid-area: packages-card1
 
-// 12345
+  &-card2
+    grid-area: packages-card2
 
-// `1314
+  &-card3
+    grid-area: packages-card3
 
-// `4`21
+  &-card4
+    grid-area: packages-card4
 
-// 214412
-
-.packages-card1
-  flex-direction: row
-  grid-area: packages-card1
-
-.packages-card2
-  grid-area: packages-card2
-
-.packages-card3
-  grid-area: packages-card3
-
-.packages-card4
-  grid-area: packages-card4
-
-.packages-card5
-  grid-area: packages-card5
+  &-card5
+    grid-area: packages-card5
