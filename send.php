@@ -9,14 +9,27 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
+$modalEmail = $_POST['modalEmail'];
 
     
 // в зависимости от пришедшей формы формируем сообщение:
-if(isset($_POST['email'])){
+
+if(isset($_POST['modalEmail'])){
+    // если есть что-то в $_POST['email']
+    $title = "View ohter options Best Tour Plan";
+    $body = "
+    <h2>Новый запрос</h2> 
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br>
+    <b>email:</b> $modalEmail<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+} else {
+    if(isset($_POST['email'])){
     // если есть что-то в $_POST['email']
     $title = "Новая пописка на Best Tour Plan";
     $body = 'User mail: ' . $_POST['email'];
-} else {
+    }    else {
     // если нет, отправлена форма с телефоном и пр.
     $title = "Новое обращение Best Tour Plan";
     $body = "
@@ -26,6 +39,22 @@ if(isset($_POST['email'])){
     <b>Сообщение:</b><br>$message
     ";
 }
+}
+
+// if(isset($_POST['email'])){
+//     // если есть что-то в $_POST['email']
+//     $title = "Новая пописка на Best Tour Plan";
+//     $body = 'User mail: ' . $_POST['email'];
+// } else {
+//     // если нет, отправлена форма с телефоном и пр.
+//     $title = "Новое обращение Best Tour Plan";
+//     $body = "
+//     <h2>Новое обращение</h2> 
+//     <b>Имя:</b> $name<br>
+//     <b>Телефон:</b> $phone<br><br>
+//     <b>Сообщение:</b><br>$message
+//     ";
+// }
 
 
 // Настройки PHPMailer
