@@ -47,8 +47,10 @@ $(document).ready(function () {
   // скипт модального окна
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
+  var closeModalOverlay = $(".modal__overlay--close");
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
+  closeModalOverlay.on("click", closeModal);
 
   // функция открытия окна
   function openModal() {

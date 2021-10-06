@@ -1570,6 +1570,10 @@ template {
     grid-column: span 27;
     grid-row: 4;
   }
+
+  .modal__button {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 767px) {
   body {
@@ -1787,6 +1791,10 @@ template {
   .footer__title {
     font-size: 14px;
   }
+
+  .modal__dialog {
+    padding: 33px 44px;
+  }
 }
 @media (max-width: 576px) {
   .logo {
@@ -1992,5 +2000,18 @@ template {
   }
   .footer__icon-wrapper {
     min-width: 32px;
+  }
+
+  .modal__dialog {
+    padding: 20px 20px;
+    max-height: 90%;
+    overflow: auto;
+  }
+  .modal__title {
+    font-size: 14px;
+  }
+  .modal__message {
+    padding: 10px 10px;
+    min-height: 90px;
   }
 }/*# sourceMappingURL=style.css.map */

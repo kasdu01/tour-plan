@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="body__overflow">
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
@@ -56,8 +56,8 @@
             </li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activites</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
+            <li class="navbar-menu__item"><a href="#activites" class="navbar-menu__link">Activites</a></li>
+            <li class="navbar-menu__item"><a href="#packages" class="navbar-menu__link">Hotel Day Packages</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rastaraunts</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
@@ -189,6 +189,8 @@
     </section>
     <!-- ./hotel -->
     <section class="packages">
+      <a name="packages"></a>
+
       <div class="container">
         <div class="packages__title">Other Packages</div>
         <div class="packages-wrapper">
@@ -241,7 +243,7 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-horizontal -->
-              <button class="packages__button packages__button1">Book Now</button>
+              <button data-toggle="modal" class="packages__button packages__button1">Book Now</button>
             </div>
             <!-- /.packages__card1 -->
             <div class="packages-card packages-card2">
@@ -278,7 +280,7 @@
                 </div>
                 <!-- /.price -->
               </div>
-              <button class="packages__button">Book Now</button>
+              <button data-toggle="modal" class="packages__button">Book Now</button>
             </div>
             <!-- /.packages-card2 -->
             <div class="packages-card packages-card3">
@@ -316,7 +318,7 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages__button">Book Now</button>
+              <button data-toggle="modal" class="packages__button">Book Now</button>
             </div>
             <!-- /.packages-card3 -->
             <div class="packages-card packages-card4">
@@ -354,7 +356,7 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages__button">Book Now</button>
+              <button data-toggle="modal" class="packages__button">Book Now</button>
             </div>
             <!-- /.packages-card4 -->
             <div class="packages-card packages-card5">
@@ -392,7 +394,7 @@
                 <!-- /.price -->
               </div>
               <!-- /.packages-card__text-vertical -->
-              <button class="packages__button">Book Now</button>
+              <button data-toggle="modal" class="packages__button">Book Now</button>
             </div>
             <!-- /.packages-card5 -->
           </div>
@@ -530,28 +532,29 @@
     </section>
     <!-- /.reviews -->
     <section class="activites">
+      <a name="activites"></a>
       <div class="container">
         <div class="activites__title">Other Activities</div>
-        <div class="activites-wrapper">
+        <div href="#activites" class="activites-wrapper">
           <div class="activites-card activites__card1">
             <img src="img/activites-1.jpg" alt="activites-1" class="activites-card__image" />
             <span class="activites-card__label">The curious corner of&nbsp;chamarel</span>
-            <div class="activites-card__button">Book Now</div>
+            <div data-toggle="modal" class="activites-card__button">Book Now</div>
           </div>
           <div class="activites-card activites__card2">
             <img src="img/activites-2.jpg" alt="activites-2" class="activites-card__image" />
             <span class="activites-card__label">Gymkhana club golf course</span>
-            <div class="activites-card__button">Book Now</div>
+            <div data-toggle="modal" class="activites-card__button">Book Now</div>
           </div>
           <div class="activites-card activites__card3">
             <img src="img/activites-3.jpg" alt="activites-3" class="activites-card__image" />
             <span class="activites-card__label">Tamarind falls hiking trip&nbsp;-&nbsp;full day</span>
-            <div class="activites-card__button">Book Now</div>
+            <div data-toggle="modal" class="activites-card__button">Book Now</div>
           </div>
           <div class="activites-card activites__card4">
             <img src="img/activites-4.jpg" alt="activites-4" class="activites-card__image" />
             <span class="activites-card__label">The blue marine discovery quest</span>
-            <div class="activites-card__button">Book Now</div>
+            <div data-toggle="modal" class="activites-card__button">Book Now</div>
           </div>
         </div>
       </div>
@@ -658,7 +661,7 @@
     </footer>
     <!-- /.footer -->
     <div class="modal">
-      <div class="modal__overlay"></div>
+      <div class="modal__overlay modal__overlay--close"></div>
       <!-- /.modal__overlay -->
       <div class="modal__dialog">
         <a href="#" class="modal__close">
