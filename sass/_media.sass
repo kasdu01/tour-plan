@@ -14,7 +14,8 @@
       width: calc(50% - 10px)
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &-wrapper
       grid-template-columns: repeat(4, minmax(200px, 1fr))
 
@@ -24,7 +25,7 @@
       grid-template-areas: "packages-card1 packages-card1 packages-card2" "packages-card3 packages-card4 packages-card5"
 
 @media (max-width: 992px)
-  .button
+  .button, .btn
     cursor: none
   .container
     max-width: 700px
@@ -172,7 +173,8 @@
       grid-column: span 11
 
     &__input
-      flex-basis: 48%
+      &-group
+        flex-basis: 48%
     &__contact
       &-details
         grid-column: span 35
@@ -361,7 +363,8 @@
       object-fit: cover
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__title
       font-size: 14px
   .modal
