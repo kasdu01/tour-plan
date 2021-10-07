@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="body__overflow">
@@ -195,7 +196,12 @@
         <div class="packages__title">Other Packages</div>
         <div class="packages-wrapper">
           <div class="packages-grid">
-            <div class="packages-card packages-card1">
+            <div
+              class="packages-card packages-card1"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
               <img src="img/packages__image-1.jpg" alt="" class="packages-card1__image" />
               <span class="packages-card1__offer">Flash Offer &nbsp; </span>
 
@@ -246,7 +252,12 @@
               <button data-toggle="modal" class="btn packages__button packages__button1">Book Now</button>
             </div>
             <!-- /.packages__card1 -->
-            <div class="packages-card packages-card2">
+            <div
+              class="packages-card packages-card2"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-2.jpg" alt="" class="packages-card__image" />
               <div class="packages-card__text-vertical">
@@ -283,7 +294,12 @@
               <button data-toggle="modal" class="btn packages__button">Book Now</button>
             </div>
             <!-- /.packages-card2 -->
-            <div class="packages-card packages-card3">
+            <div
+              class="packages-card packages-card3"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+            >
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-3.jpg" alt="" class="packages-card__image" />
               <div class="packages-card__text-vertical">
@@ -321,7 +337,12 @@
               <button data-toggle="modal" class="btn packages__button">Book Now</button>
             </div>
             <!-- /.packages-card3 -->
-            <div class="packages-card packages-card4">
+            <div
+              class="packages-card packages-card4"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+            >
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-4.jpg" alt="" class="packages-card__image" />
               <div class="packages-card__text-vertical">
@@ -359,7 +380,12 @@
               <button data-toggle="modal" class="btn packages__button">Book Now</button>
             </div>
             <!-- /.packages-card4 -->
-            <div class="packages-card packages-card5">
+            <div
+              class="packages-card packages-card5"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+            >
               <span class="packages__offer">Flash Offer</span>
               <img src="img/packages__image-5.jpg" alt="" class="packages-card__image" />
               <div class="packages-card__text-vertical">
@@ -414,8 +440,8 @@
               subscribe to our
               <span class="newsletter-title__strong">Newsletter</span>
             </h2>
-            <form action="send.php" method="POST" class="newsletter-subscribe" onsubmit="send(event, 'send.php')">
-              <input type="text" class="newsletter-subscribe__input" placeholder="Your email address" name="email" />
+            <form action="send.php" method="POST" class="form newsletter-subscribe" onsubmit="send(event, 'send.php')">
+              <input type="email" class="newsletter-subscribe__input" placeholder="Your email address" name="email" required />
               <button class="newsletter-subscribe__button">Send</button>
             </form>
           </div>
@@ -536,22 +562,22 @@
       <div class="container">
         <div class="activites__title">Other Activities</div>
         <div href="#activites" class="activites-wrapper">
-          <div class="activites-card activites__card1">
+          <div class="activites-card activites__card1" data-aos="fade-up" data-aos-duration="300">
             <img src="img/activites-1.jpg" alt="activites-1" class="activites-card__image" />
             <span class="activites-card__label">The curious corner of&nbsp;chamarel</span>
             <div data-toggle="modal" class="activites-card__button btn">Book Now</div>
           </div>
-          <div class="activites-card activites__card2">
+          <div class="activites-card activites__card2" data-aos="fade-up" data-aos-duration="600">
             <img src="img/activites-2.jpg" alt="activites-2" class="activites-card__image" />
             <span class="activites-card__label">Gymkhana club golf course</span>
             <div data-toggle="modal" class="activites-card__button btn">Book Now</div>
           </div>
-          <div class="activites-card activites__card3">
+          <div class="activites-card activites__card3" data-aos="fade-up" data-aos-duration="1200">
             <img src="img/activites-3.jpg" alt="activites-3" class="activites-card__image" />
             <span class="activites-card__label">Tamarind falls hiking trip&nbsp;-&nbsp;full day</span>
             <div data-toggle="modal" class="activites-card__button btn">Book Now</div>
           </div>
-          <div class="activites-card activites__card4">
+          <div class="activites-card activites__card4" data-aos="fade-up" data-aos-duration="1800">
             <img src="img/activites-4.jpg" alt="activites-4" class="activites-card__image" />
             <span class="activites-card__label">The blue marine discovery quest</span>
             <div data-toggle="modal" class="activites-card__button btn">Book Now</div>
@@ -564,7 +590,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" />
+          <a class="logo footer__logo" href="#"><img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" /></a>
+
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -650,7 +677,14 @@
                 <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required />
               </div>
               <div class="footer__input-group">
-                <input type="tel" class="input input-phone footer__input" placeholder="Phone Number*" name="phone" required />
+                <input
+                  type="tel"
+                  class="input input-phone footer__input"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                  minlength="16"
+                />
               </div>
               <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button footer__button">Send</button>
@@ -674,7 +708,14 @@
         <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
         <form action="send.php" method="POST" class="form modal__form" onsubmit="send(event, 'send.php')">
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2" />
-          <input type="tel" class="input input-phone modal__input" placeholder="Phone Number*" name="phone" required />
+          <input
+            type="tel"
+            class="input input-phone modal__input"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+            minlength="16"
+          />
           <input type="email" class="input modal__input" placeholder="Email*" name="modalEmail" required />
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
@@ -690,6 +731,7 @@
     <script src="js/parallax.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

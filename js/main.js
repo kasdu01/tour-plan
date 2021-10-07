@@ -81,7 +81,8 @@ $(document).ready(function () {
         minlength: "Minimal lenght of name 2 symbol"
       },
       phone: {
-        required: "Please input your phone"
+        required: "Please input your phone",
+        minlength: "An 10-digit number"
       },
       email: {
         required: "We need your email address to contact you",
@@ -90,6 +91,17 @@ $(document).ready(function () {
     }
   });    
   });
+
+  $(".newsletter-subscribe").validate({
+    errorClass: "invalid",
+    messages: {
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      },
+    },
+  });    
+  
 
   $(document).ready(function(){
     $(".input-phone").click(function(){
@@ -101,5 +113,13 @@ $(document).ready(function () {
     $('.input-phone').attr("placeholder", "+7 (999) 999-9999");
     });
   
+  // AOS.init();
+
+  AOS.init({
+  disable: function() {
+    var maxWidth = 992;
+    return window.innerWidth < maxWidth;
+    }
+  });
 
 });
