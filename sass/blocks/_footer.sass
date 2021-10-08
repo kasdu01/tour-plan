@@ -99,16 +99,16 @@
 
   &__input
     width: 100%
+    &::placeholder
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: inherit
     &-group
       margin-bottom: 15px
       flex-basis: 48%
       position: relative
-      &::placeholder
-        font-style: normal
-        font-weight: normal
-        font-size: 12px
-        line-height: 15px
-        color: inherit
 
   &__message
 
@@ -128,3 +128,25 @@
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+
+  &-disclaimer
+    grid-column: 2 / 4
+    justify-self: center
+
+    margin: 0
+    padding: 0
+
+    &__info
+
+    &__ul
+      display: flex
+      min-width: 283px
+      list-style: none
+
+    &__item
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $footer-text-color
+  &-paymants
