@@ -196,11 +196,29 @@
         flex-basis: 48%
     &__contact
       &-details
+        margin-top: -3px
         grid-column: span 35
         grid-row: 3
       &-form
+        margin-top: -8px
         grid-column: span 27
         grid-row: 4
+    &-disclaimer
+      grid-column: 1 / 20
+      justify-self: flex-start
+      align-self: center
+    &-payments
+      grid-column: 26 / 36
+      align-self: flex-start
+      // grid-column: 26 / 36
+      justify-self: end
+    &-invisible
+      height: 112px
+    &-bottom
+      margin-top: 60px
+    &-disclaimer
+      margin: 0
+
   .modal
     &__button
       margin-bottom: 15px
@@ -424,8 +442,17 @@
 
   .hotel
     padding-bottom: 42px
+    &-slider
+      &__button
+        background-size: 5px
+        &--prev
+          left: 0
+        &--next
+          right: 0
+
     &__slider
       margin-bottom: 20px
+
     &-info
       margin-bottom: 20px
     &-right
@@ -533,7 +560,7 @@
         margin-top: 11px
         margin-bottom: 25px
       &--mb-3
-        margin-top: 13px
+        margin-top: 20px
         margin-bottom: 16px
 
     &__logo
@@ -559,18 +586,50 @@
       grid-row: 5
       grid-column: 1
 
+    &__form
+      flex-direction: column
+
+    &__message
+      width: 100%
+      min-height: 125px
+      margin-bottom: 12px
+
     &__input
       flex-basis: 100%
+      width: 100%
+      &-group
+        width: 100%
+
+    &__info
+      align-self: flex-start
+      margin-bottom: 13px
+
+    &__button
+      order: 1
+      align-self: flex-start
+
     &__contact
       &-details
         grid-row: 6
         grid-column: 1
+
       &-form
         grid-row: 7
         grid-column: 1
+
+    &-disclaimer
+      margin-bottom: 12px
+
     &__icon
       &-wrapper
         min-width: 32px
+    &-bottom
+      margin-top: 30px
+      flex-direction: column
+    &-payments
+      left: 0
+      bottom: 0
+      position: relative
 
   .modal
     &__dialog

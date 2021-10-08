@@ -122,6 +122,9 @@ img {
   font-size: 12px;
 }
 
+.map {
+  border: none;
+}
 .map__frame {
   width: 100%;
 }
@@ -131,6 +134,10 @@ a {
 }
 a:hover {
   opacity: 0.6;
+}
+
+div.map {
+  background-image: url("../img/map.png");
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -535,6 +542,9 @@ template {
   padding-left: 30px;
   padding-right: 75px;
 }
+.search__input::placeholder {
+  color: #BDBDBD;
+}
 .search__button {
   position: absolute;
   top: 0;
@@ -721,7 +731,10 @@ template {
   background: #0a223d;
   color: #ffffff;
   border-radius: 8px;
-  padding: 28px;
+  padding-left: 22px;
+  padding-top: 33px;
+  padding-right: 22px;
+  padding-bottom: 26px;
 }
 .booking__info {
   display: flex;
@@ -1070,6 +1083,9 @@ template {
   font-size: 14px;
   line-height: 18px;
 }
+.newsletter-subscribe__input::placeholder {
+  color: #BDBDBD;
+}
 .newsletter-subscribe__input-group {
   position: absolute;
   height: 100%;
@@ -1386,7 +1402,7 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: inherit;
+  color: #BDBDBD;
 }
 .footer__input-group {
   margin-bottom: 15px;
@@ -1403,7 +1419,7 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: inherit;
+  color: #BDBDBD;
 }
 .footer__info {
   font-style: normal;
@@ -1412,32 +1428,28 @@ template {
   line-height: 15px;
   color: #E0E0E0;
 }
+.footer-bottom {
+  display: flex;
+  margin-top: 103px;
+  position: relative;
+}
 .footer-disclaimer {
-  grid-column: 2/4;
-  justify-self: center;
-  margin: 0;
-  padding: 0;
+  margin: auto;
 }
 .footer-disclaimer__ul {
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
-  min-width: 283px;
   list-style: none;
-  margin: 0;
   padding: 0;
-}
-.footer-disclaimer__item {
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
-  line-height: 15px;
-  color: #BDBDBD;
-  align-self: flex-end;
-  height: 100px;
+  width: 280px;
+  justify-content: space-between;
 }
-.footer-paymants {
-  justify-self: end;
-  align-self: flex-end;
-  height: 100px;
+.footer-payments {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .modal__overlay {
@@ -1457,6 +1469,8 @@ template {
   opacity: 1;
 }
 .modal__dialog {
+  max-height: 90%;
+  overflow-y: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1722,12 +1736,33 @@ template {
     flex-basis: 48%;
   }
   .footer__contact-details {
+    margin-top: -3px;
     grid-column: span 35;
     grid-row: 3;
   }
   .footer__contact-form {
+    margin-top: -8px;
     grid-column: span 27;
     grid-row: 4;
+  }
+  .footer-disclaimer {
+    grid-column: 1/20;
+    justify-self: flex-start;
+    align-self: center;
+  }
+  .footer-payments {
+    grid-column: 26/36;
+    align-self: flex-start;
+    justify-self: end;
+  }
+  .footer-invisible {
+    height: 112px;
+  }
+  .footer-bottom {
+    margin-top: 60px;
+  }
+  .footer-disclaimer {
+    margin: 0;
   }
 
   .modal__button {
@@ -1986,6 +2021,15 @@ template {
   .hotel {
     padding-bottom: 42px;
   }
+  .hotel-slider__button {
+    background-size: 5px;
+  }
+  .hotel-slider__button--prev {
+    left: 0;
+  }
+  .hotel-slider__button--next {
+    right: 0;
+  }
   .hotel__slider {
     margin-bottom: 20px;
   }
@@ -2127,7 +2171,7 @@ template {
     margin-bottom: 25px;
   }
   .footer__title--mb-3 {
-    margin-top: 13px;
+    margin-top: 20px;
     margin-bottom: 16px;
   }
   .footer__logo {
@@ -2153,8 +2197,28 @@ template {
     grid-row: 5;
     grid-column: 1;
   }
+  .footer__form {
+    flex-direction: column;
+  }
+  .footer__message {
+    width: 100%;
+    min-height: 125px;
+    margin-bottom: 12px;
+  }
   .footer__input {
     flex-basis: 100%;
+    width: 100%;
+  }
+  .footer__input-group {
+    width: 100%;
+  }
+  .footer__info {
+    align-self: flex-start;
+    margin-bottom: 13px;
+  }
+  .footer__button {
+    order: 1;
+    align-self: flex-start;
   }
   .footer__contact-details {
     grid-row: 6;
@@ -2164,8 +2228,20 @@ template {
     grid-row: 7;
     grid-column: 1;
   }
+  .footer-disclaimer {
+    margin-bottom: 12px;
+  }
   .footer__icon-wrapper {
     min-width: 32px;
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  .footer-payments {
+    left: 0;
+    bottom: 0;
+    position: relative;
   }
 
   .modal__dialog {
