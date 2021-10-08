@@ -46,10 +46,18 @@ img {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  opacity: 1;
+}
+.button:hover {
+  opacity: 0.6;
 }
 
 .btn {
   cursor: pointer;
+  opacity: 1;
+}
+.btn:hover {
+  opacity: 0.6;
 }
 
 .form {
@@ -112,6 +120,17 @@ img {
   background-color: #f35371;
   border-radius: 8px;
   font-size: 12px;
+}
+
+.map__frame {
+  width: 100%;
+}
+
+a {
+  opacity: 1;
+}
+a:hover {
+  opacity: 0.6;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -698,7 +717,7 @@ template {
 .booking__info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 .booking__price {
   display: flex;
@@ -780,6 +799,7 @@ template {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  padding: 13px 18px;
 }
 
 .map {
@@ -789,7 +809,7 @@ template {
   overflow: hidden;
 }
 
-.button--back {
+.back {
   width: 100px;
   min-height: 45px;
   font-family: "Nunito";
@@ -1029,7 +1049,8 @@ template {
   border-radius: 4px;
 }
 .newsletter-subscribe__input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
+  width: 100%;
   outline: none;
   height: 100%;
   border: none;
@@ -1114,7 +1135,7 @@ template {
 }
 .reviews-slider__button {
   position: absolute;
-  top: 157px;
+  top: 148px;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -1128,11 +1149,11 @@ template {
 }
 .reviews-slider__button--prev {
   background-image: url(../img/arrow-prev-secondary.svg);
-  left: 0;
+  left: 18px;
 }
 .reviews-slider__button--next {
   background-image: url(../img/arrow-next-secondary.svg);
-  right: 0;
+  right: 18px;
 }
 .reviews-slider__profile {
   display: flex;
@@ -1505,8 +1526,15 @@ template {
   }
 }
 @media (max-width: 992px) {
+  a:hover {
+    opacity: 1;
+  }
+
   .button, .btn {
-    cursor: none;
+    cursor: default;
+  }
+  .button:hover, .btn:hover {
+    opacity: 1;
   }
 
   .container {
@@ -1536,6 +1564,9 @@ template {
 
   .search__input {
     width: 340px;
+  }
+  .search__button:hover {
+    opacity: 1;
   }
 
   .hotel {
@@ -1586,6 +1617,9 @@ template {
     width: 92%;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .newsletter-subscribe__button:hover {
+    opacity: 1;
   }
 
   .reviews {
