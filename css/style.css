@@ -652,8 +652,17 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
-  position: relative;
   border-radius: 8px;
+}
+.hotel-slider__slide::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
 }
 .hotel-slider__button {
   position: absolute;
@@ -678,19 +687,9 @@ template {
   background-image: url(../img/arrow-prev.svg);
 }
 .hotel-slider__image {
-  position: relative;
   min-height: 100%;
   object-fit: cover;
-}
-.hotel-slider__image::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  position: relative;
 }
 
 .stars {
