@@ -1,7 +1,8 @@
 $(document).ready(function () {
   const hotelSwiper = new Swiper('.hotel-slider', {
     // Optional parameters
-    loop: true,
+    loop: true,  
+    simulateTouch: true,
 
     // Navigation arrows
     navigation: {
@@ -18,6 +19,7 @@ $(document).ready(function () {
   const reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
+    simulateTouch: true,
 
     // Navigation arrows
     navigation: {
