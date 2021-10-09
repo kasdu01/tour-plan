@@ -652,6 +652,7 @@ template {
 .hotel-slider {
   width: 728px;
   height: 450px;
+  position: relative;
   border-radius: 8px;
 }
 .hotel-slider__slide::after {
