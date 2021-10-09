@@ -1826,6 +1826,8 @@ template {
     display: flex;
     margin-bottom: 35px;
     max-width: 246px;
+    margin: 0;
+    margin-bottom: 21px;
   }
   .navbar-bottom {
     display: none;
@@ -1833,11 +1835,11 @@ template {
     left: 0;
     right: 0;
     bottom: 0;
-    top: 78px;
+    top: 65px;
     padding-top: 30px;
   }
   .navbar-bottom--visible {
-    padding-top: 0;
+    padding-top: 7px;
     display: block;
     overflow: scroll;
   }
@@ -1849,10 +1851,6 @@ template {
   }
   .navbar-menu__item--mobile--visible {
     display: block;
-  }
-  .navbar__search--mobile--visible {
-    max-width: 280px;
-    margin: 0;
   }
 
   .menu-button {
@@ -2040,7 +2038,8 @@ template {
   }
 
   .navbar-top {
-    padding-top: 22px;
+    padding-top: 18px;
+    padding-bottom: 30px;
   }
 
   .breadcrumb-list {
